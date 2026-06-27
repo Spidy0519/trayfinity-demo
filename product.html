@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAYFINITY | HOME </title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">
+    
+    <script src="js/products.js"></script>
+    
+    <link rel="stylesheet" href="css/products.css">
+    
+    <!-- Bootstrap 5 CSS for Navbar -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GreenPack Custom Styles for Navbar -->
+    <link href="css/home.css" rel="stylesheet">
+    <style>
+        /* Override Swiper default navigation styles to prevent massive SVG expansion and hide default text arrows */
+        .swiper-button-prev, .swiper-button-next {
+            width: clamp(1.5rem, 3vw, 2rem) !important;
+            height: clamp(2.5rem, 5vw, 3.5rem) !important;
+        }
+        .swiper-button-prev::after, .swiper-button-next::after {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav glass always-glass" id="mainNav">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand fw-black" href="index.html">GREEN<span class="text-accent">PACK</span></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+                    <li class="nav-item"><a class="nav-link mx-3" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="#">Sustainability</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="#">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="#">Company</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-cta btn-dark rounded-pill px-5 py-3 fw-bold">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="swiper productsSwiper h-screen">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+                <div class="h-screen relative lg:bg-cover lg:bg-center" style="--mobile-bg: #f9ffd4; --desktop-bg: url('https://hapdaily.com/wp-content/uploads/2026/01/Aniva-bg.png');">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-[90vw] lg:items-end h-full relative z-10 gap-4 lg:gap-7">
+                        <div class="flex flex-col items-center max-lg:justify-end lg:items-start text-center lg:text-left px-4 lg:px-0 pt-4 lg:pt-12 mt-[84px] lg:h-full lg:self-start text-[#677415]">
+                            <h1 class="slide-title text-2xl lg:text-4xl 2xl:text-5xl lg:leading-[1.3] font-medium mb-3 lg:mb-5">A tasty way to stay refreshed</h1>
+                            <p class="slide-description text-sm lg:text-lg mb-4 lg:mb-6 2xl:leading-8 text-neutral-700">
+                                A delicious range of whey drinks with a burst of taste and freshness in every sip. Aniva comes to you in two refreshing flavours – mango and orange.
+                            </p>
+                            <p class="slide-cta lg:text-2xl">
+                                <a href="#" class="inline-block rounded-2xl lg:rounded-3xl px-5 lg:px-6 py-3 lg:py-4 bg-[#FF4D00] uppercase text-white hover:bg-orange-700 text-sm sm:text-base lg:text-lg font-semibold lg:font-normal">See More</a>
+                            </p>
+                        </div>
+                        <div class="relative text-center px-2 lg:px-5 flex-1 lg:flex-none flex items-center justify-center max-lg:mb-8">
+                            <div class="relative inline-block">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/aniva-mobile.png" class="slide-image max-h-[38vh] sm:max-h-[40vh] lg:hidden w-auto object-contain">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/Aniva-window.png" class="slide-image hidden lg:block lg:h-[80vh] w-auto lg:w-[95%] object-contain lg:mx-auto">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/Group-1729-e1769495637858.png" class="product-image-layer w-[90%] lg:w-[75%] object-contain absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="h-screen relative lg:bg-cover lg:bg-center" style="--mobile-bg: #cfcfcf; --desktop-bg: url('https://hapdaily.com/wp-content/uploads/2026/01/Dako-bg.png');">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-[90vw] lg:items-end h-full relative z-10 gap-4 lg:gap-7">
+                        <div class="flex flex-col items-center max-lg:justify-end lg:items-start text-center lg:text-left px-4 lg:px-0 pt-4 lg:pt-12 mt-[84px] lg:h-full lg:self-start text-[#69675E]">
+                            <h1 class="slide-title text-2xl lg:text-4xl 2xl:text-5xl lg:leading-[1.3] font-medium mb-3 lg:mb-5">Take your desserts to the next level</h1>
+                            <p class="slide-description text-sm lg:text-lg mb-4 lg:mb-6 2xl:leading-8 text-neutral-700">
+                                Dako is a range of accompaniments that you can pair with your desserts, including spreads, sauces, nuts and more.
+                            </p>
+                            <p class="slide-cta lg:text-2xl">
+                                <a href="#" class="inline-block rounded-2xl lg:rounded-3xl px-5 lg:px-6 py-3 lg:py-4 bg-[#FF4D00] uppercase text-white hover:bg-orange-700 text-sm sm:text-base lg:text-lg font-semibold lg:font-normal">See More</a>
+                            </p>
+                        </div>
+                        <div class="relative text-center px-2 lg:px-5 flex-1 lg:flex-none flex items-center justify-center max-lg:mb-8">
+                            <div class="relative inline-block">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/dako-mobile.png" class="slide-image max-h-[38vh] sm:max-h-[40vh] lg:hidden w-auto object-contain">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/Dako-window.png" class="slide-image hidden lg:block lg:h-[80vh] w-auto lg:w-[95%] object-contain lg:mx-auto">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/Group-1-1.png" class="product-image-layer w-[90%] lg:w-[75%] object-contain absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="h-screen relative lg:bg-cover lg:bg-center" style="--mobile-bg: #e4f1f9; --desktop-bg: url('https://hapdaily.com/wp-content/uploads/2026/01/Hatsun-bg.png');">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 container mx-auto max-w-[90vw] lg:items-end h-full relative z-10 gap-4 lg:gap-7">
+                        <div class="flex flex-col items-center max-lg:justify-end lg:items-start text-center lg:text-left px-4 lg:px-0 pt-4 lg:pt-12 mt-[84px] lg:h-full lg:self-start text-[#135555]">
+                            <h1 class="slide-title text-2xl lg:text-4xl 2xl:text-5xl lg:leading-[1.3] font-medium mb-3 lg:mb-5">High quality dairy products</h1>
+                            <p class="slide-description text-sm lg:text-lg mb-4 lg:mb-6 2xl:leading-8 text-neutral-700">
+                                From cooking essentials to refreshing breaks, Hatsun provides high-quality curd, yoghurt shakes, lassi, paneer, and buttermilk.
+                            </p>
+                            <p class="slide-cta lg:text-2xl">
+                                <a href="#" class="inline-block rounded-2xl lg:rounded-3xl px-5 lg:px-6 py-3 lg:py-4 bg-[#FF4D00] uppercase text-white hover:bg-orange-700 text-sm sm:text-base lg:text-lg font-semibold lg:font-normal">See More</a>
+                            </p>
+                        </div>
+                        <div class="relative text-center px-2 lg:px-5 flex-1 lg:flex-none flex items-center justify-center max-lg:mb-8">
+                            <div class="relative inline-block">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/hatsun-mobile.png" class="slide-image max-h-[38vh] sm:max-h-[40vh] lg:hidden w-auto object-contain">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/Hatsun-window.png" class="slide-image hidden lg:block lg:h-[80vh] w-auto lg:w-[95%] object-contain lg:mx-auto">
+                                <img src="https://hapdaily.com/wp-content/uploads/2026/01/HATSUN-Comp-1-3-e1769495743913.png" class="product-image-layer w-[90%] lg:w-[75%] object-contain absolute bottom-0 left-1/2 transform -translate-x-1/2 pointer-events-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation Buttons Wrapper -->
+        <div class="absolute inset-0 z-30 pointer-events-none">
+            <div class="container mx-auto max-w-[90vw] grid grid-cols-1 lg:grid-cols-2 w-full h-full">
+                <div class="hidden lg:block"></div> <!-- Empty left column -->
+                <div class="relative w-full h-full pointer-events-none">
+                    <div class="swiper-button-prev absolute top-1/2 -translate-y-1/2 mt-0 left-2 lg:left-10 pointer-events-auto cursor-pointer w-auto h-auto">
+                        <svg class="w-6 h-10 lg:w-8 lg:h-14" viewBox="0 0 58 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M55.1542 12.3761L9.9507 45.0628V33.9381L55.1542 66.6247C61.9585 71.5398 55.2969 82.7332 48.3975 77.7495L3.19398 45.0628C-1.06466 41.9923 -1.06466 37.0429 3.19398 33.9381L48.3856 1.25142C55.285 -3.73235 61.9585 7.44963 55.1423 12.3761H55.1542Z" fill="#555555"></path>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next absolute top-1/2 -translate-y-1/2 mt-0 right-2 lg:right-10 pointer-events-auto cursor-pointer w-auto h-auto">
+                        <svg class="w-6 h-10 lg:w-8 lg:h-14" viewBox="0 0 58 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.84582 12.3761L48.0493 45.0628V33.9381L2.84582 66.6247C-3.9585 71.5398 2.70306 82.7332 9.60254 77.7495L54.806 45.0628C59.0647 41.9923 59.0647 37.0429 54.806 33.9381L9.61445 1.25142C2.71497 -3.73235 -3.95849 7.44963 2.85772 12.3761H2.84582Z" fill="#555555"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GreenPack Custom Script -->
+    <script src="js/home.js"></script>
+</body>
+</html>
