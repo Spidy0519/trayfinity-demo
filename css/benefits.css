@@ -1,0 +1,261 @@
+/* ==========================================================================
+   BENEFITS SECTION STYLES (Floating Node Layout)
+   ========================================================================== */
+
+.tf-benefits-section {
+    padding: 180px 0;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+
+/* Background Text */
+.tf-benefits-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 30vw;
+    font-weight: 900;
+    color: #111111;
+    opacity: 0.03;
+    z-index: 0;
+    pointer-events: none;
+    letter-spacing: -5px;
+    white-space: nowrap;
+}
+
+/* Doodles */
+.tf-benefits-doodles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+.tf-bdoodle { position: absolute; opacity: 0.7; }
+.tf-bdoodle-leaf { width: 120px; top: 15%; right: 10%; transform: rotate(15deg); }
+.tf-bdoodle-arrow { width: 150px; bottom: 15%; left: 40%; }
+.tf-bdoodle-dots { 
+    width: 200px; height: 200px; 
+    background-image: radial-gradient(#e0e0e0 2px, transparent 2px); 
+    background-size: 20px 20px; 
+    top: 60%; left: 5%; 
+    border-radius: 50%;
+}
+
+.tf-benefits-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Typography */
+.tf-benefits-left {
+    padding-right: 50px;
+}
+.tf-label-small {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ED751C;
+    text-transform: uppercase;
+}
+.tf-benefits-headline {
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: #111111;
+}
+.tf-benefits-desc {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Button */
+.btn-benefits-cta {
+    background-color: #ED751C;
+    color: #FFFFFF;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-benefits-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(237, 117, 28, 0.4);
+    background-color: #f08b3e;
+    color: #FFFFFF;
+}
+.tf-btn-arrow {
+    transition: transform 0.3s ease;
+}
+.btn-benefits-cta:hover .tf-btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Scatter Composition */
+.tf-benefits-right {
+    height: 700px;
+}
+
+.tf-scatter-item {
+    position: absolute;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 5;
+}
+.tf-scatter-item:hover {
+    transform: scale(1.05) translateY(-10px) !important;
+    z-index: 20;
+}
+.tf-scatter-img {
+    width: 220px;
+    border-radius: 12px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    transition: filter 0.3s ease;
+}
+.tf-scatter-item:hover .tf-scatter-img {
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.25));
+}
+
+/* Specific Positions for Trays */
+.tf-tray-item-1 { top: 10%; left: 5%; transform: rotate(-5deg); }
+.tf-tray-item-2 { top: 35%; right: 5%; transform: rotate(8deg); }
+.tf-tray-item-3 { bottom: 15%; left: 25%; transform: rotate(3deg); }
+.tf-tray-item-4 { top: 5%; left: 45%; transform: rotate(-12deg); }
+.tf-tray-item-5 { bottom: 10%; right: 20%; transform: rotate(-6deg); }
+
+/* Benefit Tags */
+.tf-benefit-tag {
+    position: absolute;
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.tf-check-icon {
+    background: #ED751C;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+.tf-benefit-tag.highlight {
+    box-shadow: 0 15px 30px rgba(237, 117, 28, 0.2);
+    transform: translateY(-5px) scale(1.05) !important;
+    border-color: rgba(237, 117, 28, 0.3);
+}
+
+/* Specific Positions for Tags */
+.tf-tag-eco { top: 25%; left: -5%; }
+.tf-tag-safe { top: 50%; right: -2%; }
+.tf-tag-leak { bottom: 5%; left: 5%; }
+.tf-tag-recycle { top: 20%; left: 35%; }
+.tf-tag-light { bottom: 25%; right: 5%; }
+.tf-tag-premium { bottom: 35%; left: 45%; }
+
+/* Connector SVG Canvas */
+.tf-connector-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+.tf-connector-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 2s cubic-bezier(0.2, 0.8, 0.2, 1), stroke 0.3s ease;
+}
+.tf-connector-line.drawn {
+    stroke-dashoffset: 0;
+}
+.tf-connector-line.highlight {
+    stroke: #ED751C;
+    stroke-width: 2.5;
+}
+
+/* General Animations */
+.tf-anim-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.tf-anim-slide-in {
+    opacity: 0;
+    transform: translate(20px, 20px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.tf-benefits-section.tf-visible .tf-anim-fade-up,
+.tf-benefits-section.tf-visible .tf-anim-slide-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Staggered Delays */
+.tf-tag-eco { transition-delay: 0.2s; }
+.tf-tag-safe { transition-delay: 0.4s; }
+.tf-tag-leak { transition-delay: 0.6s; }
+.tf-tag-recycle { transition-delay: 0.3s; }
+.tf-tag-light { transition-delay: 0.5s; }
+.tf-tag-premium { transition-delay: 0.7s; }
+
+/* Responsive */
+@media (max-width: 991px) {
+    .tf-benefits-section { padding: 100px 0; }
+    .tf-benefits-headline { font-size: 42px; }
+    .tf-benefits-right { height: 600px; margin-top: 50px; }
+    .tf-scatter-img { width: 160px; }
+    
+    .tf-tag-eco { top: 20%; left: 0%; }
+    .tf-tag-safe { top: 40%; right: 0%; }
+    .tf-tag-leak { bottom: 10%; left: 0%; }
+    .tf-tag-recycle { top: 15%; left: 40%; }
+    .tf-tag-light { bottom: 20%; right: 0%; }
+    .tf-tag-premium { bottom: 40%; left: 30%; }
+    
+    .tf-tray-item-1 { top: 5%; left: 10%; }
+    .tf-tray-item-2 { top: 30%; right: 10%; }
+    .tf-tray-item-3 { bottom: 10%; left: 20%; }
+    .tf-tray-item-4 { top: 10%; left: 50%; }
+    .tf-tray-item-5 { bottom: 20%; right: 30%; }
+}
+
+@media (max-width: 767px) {
+    .tf-benefits-section { padding: 80px 0; }
+    .tf-benefits-headline { font-size: 36px; }
+    .tf-benefits-right { height: 500px; }
+    .tf-scatter-img { width: 120px; }
+    .tf-benefit-tag { font-size: 12px; padding: 6px 12px; }
+    .tf-connector-canvas { display: none; /* Simplify on mobile */ }
+    
+    .tf-tray-item-1 { top: 0%; left: 5%; }
+    .tf-tray-item-2 { top: 25%; right: 5%; }
+    .tf-tray-item-3 { bottom: 5%; left: 5%; }
+    .tf-tray-item-4 { top: 5%; left: 55%; }
+    .tf-tray-item-5 { bottom: 25%; right: 25%; }
+    
+    .tf-tag-eco { top: 15%; left: -2%; }
+    .tf-tag-safe { top: 35%; right: -2%; }
+    .tf-tag-leak { bottom: 15%; left: -2%; }
+    .tf-tag-recycle { top: 10%; left: 45%; }
+    .tf-tag-light { bottom: 10%; right: -2%; }
+    .tf-tag-premium { bottom: 35%; left: 15%; }
+}

@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenPack | Smart Packaging</title>
+    <title>Trayfinity | Smart Packaging</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Styles -->
     <link href="css/home.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/benefits.css" rel="stylesheet">
 </head>
 <body>
 
@@ -31,7 +35,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top custom-nav" id="mainNav">
         <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand fw-black" href="#">GREEN<span class="text-accent">PACK</span></a>
+            <a class="navbar-brand fw-black" href="#">Tary<span class="text-accent">FINITY</span></a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
@@ -60,9 +64,12 @@
                 <div class="auto-scroll-wrapper mx-auto overflow-hidden position-relative w-100 h-100">
                     <div class="photo-slideshow h-100 w-100 position-relative">
                         <!-- User will add pack photos here -->
-                        <img src="assets/images/scroll.png" class="slide-photo active" alt="Pack">
-                        <img src="assets/images/scroll1.png" class="slide-photo" alt="Pack">
-                        <img src="assets/images/scroll2.png" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll.webp" class="slide-photo active" alt="Pack">
+                        <img src="assets/webe-images/scroll1.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll2.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll3.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll4.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll5.webp" class="slide-photo" alt="Pack">
                     </div>
                 </div>
             </div>
@@ -116,9 +123,13 @@
                 <div class="auto-scroll-wrapper overflow-hidden position-relative" style="width: 80%; height: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 30;">
                     <div class="photo-slideshow h-100 w-100 position-relative">
                         <!-- User will add pack photos here -->
-                        <img src="assets/images/scroll.png" class="slide-photo active" alt="Pack">
-                        <img src="assets/images/scroll1.png" class="slide-photo" alt="Pack">
-                        <img src="assets/images/scroll2.png" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll.webp" class="slide-photo active" alt="Pack">
+                        <img src="assets/webe-images/scroll1.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll2.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll3.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll4.webp" class="slide-photo" alt="Pack">
+                        <img src="assets/webe-images/scroll5.webp" class="slide-photo" alt="Pack">
+                        
                     </div>
                 </div>
             </div>
@@ -355,12 +366,242 @@
             </div>
             <div class="ending-green-line"></div>
         </div>
+    </section>
+
+    <!-- ==============================================
+         BENEFITS SECTION (Custom Storytelling)
+         ============================================== -->
+    <section class="tf-benefits-section position-relative overflow-hidden" id="benefits">
+        <!-- Huge Background Typography -->
+        <div class="tf-benefits-bg-text">BENEFITS</div>
+        
+        <!-- Subtle SVG Background Details -->
+        <div class="tf-benefits-doodles">
+            <svg class="tf-bdoodle tf-bdoodle-leaf" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25,5 Q45,25 25,45 Q5,25 25,5 Z" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+            </svg>
+            <svg class="tf-bdoodle tf-bdoodle-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10,50 Q40,10 70,50 T130,50" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+                <path d="M130,50 L110,40 M130,50 L110,60" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="tf-bdoodle tf-bdoodle-dots"></div>
+        </div>
+
+        <div class="container-fluid px-4 px-lg-5 tf-benefits-container h-100">
+            <div class="row h-100 align-items-center">
+                <!-- Left Side: Typography -->
+                <div class="col-lg-5 tf-benefits-left">
+                    <div class="tf-label-small fw-bold mb-3 tf-anim-fade-up">WHY TRAYFINITY</div>
+                    <h2 class="tf-benefits-headline fw-black">
+                        Packaging That Protects<br>More Than Products.
+                    </h2>
+                    <p class="tf-benefits-desc mt-4 tf-anim-fade-up">
+                        Our sustainable packaging trays are designed to deliver strength, freshness and a greener tomorrow.
+                    </p>
+                    <a href="#" class="btn btn-benefits-cta rounded-pill px-5 py-3 fw-bold mt-5 tf-anim-fade-up d-inline-flex align-items-center gap-2 tf-magnetic-btn">
+                        Explore Solutions 
+                        <span class="tf-btn-arrow">→</span>
+                    </a>
+                </div>
+
+                <!-- Right Side: Asymmetrical Composition -->
+                <div class="col-lg-7 tf-benefits-right position-relative">
+                    
+                    <!-- SVG Canvas for Connector Lines -->
+                    <svg class="tf-connector-canvas" xmlns="http://www.w3.org/2000/svg">
+                        <path class="tf-connector-line tf-line-1" d="M80,180 Q150,140 220,180" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
+                        <path class="tf-connector-line tf-line-2" d="M380,220 Q480,280 520,180" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
+                        <path class="tf-connector-line tf-line-3" d="M150,420 C250,380 300,500 420,420" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
+                        <path class="tf-connector-line tf-line-4" d="M520,380 Q580,480 650,420" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
+                    </svg>
+
+                    <!-- Floating Trays -->
+                    <div class="tf-scatter-item tf-tray-item-1" data-target="tag-eco">
+                        <img src="assets/images/2.png" alt="Kraft Tray" class="tf-scatter-img">
+                    </div>
+                    <div class="tf-scatter-item tf-tray-item-2" data-target="tag-safe">
+                        <img src="assets/images/4.png" alt="Food Safe Tray" class="tf-scatter-img">
+                    </div>
+                    <div class="tf-scatter-item tf-tray-item-3" data-target="tag-recycle">
+                        <img src="assets/images/5.png" alt="Recyclable Tray" class="tf-scatter-img">
+                    </div>
+                    <div class="tf-scatter-item tf-tray-item-4" data-target="tag-light">
+                        <img src="assets/images/7.png" alt="Clamshell Tray" class="tf-scatter-img">
+                    </div>
+                    <div class="tf-scatter-item tf-tray-item-5" data-target="tag-premium">
+                        <img src="assets/images/8.png" alt="Premium Tray" class="tf-scatter-img">
+                    </div>
+
+                    <!-- Floating Benefit Tags -->
+                    <div class="tf-benefit-tag tf-tag-eco tf-anim-slide-in" id="tag-eco">
+                        <span class="tf-check-icon">✓</span> Eco Friendly
+                    </div>
+                    <div class="tf-benefit-tag tf-tag-safe tf-anim-slide-in" id="tag-safe">
+                        <span class="tf-check-icon">✓</span> Food Safe
+                    </div>
+                    <div class="tf-benefit-tag tf-tag-leak tf-anim-slide-in" id="tag-leak">
+                        <span class="tf-check-icon">✓</span> Leak Resistant
+                    </div>
+                    <div class="tf-benefit-tag tf-tag-recycle tf-anim-slide-in" id="tag-recycle">
+                        <span class="tf-check-icon">✓</span> Recyclable
+                    </div>
+                    <div class="tf-benefit-tag tf-tag-light tf-anim-slide-in" id="tag-light">
+                        <span class="tf-check-icon">✓</span> Lightweight
+                    </div>
+                    <div class="tf-benefit-tag tf-tag-premium tf-anim-slide-in" id="tag-premium">
+                        <span class="tf-check-icon">✓</span> Premium Finish
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         TRAYFINITY CUSTOM FOOTER
+         ============================================== -->
+    <section class="footer-wrapper py-5 px-4 px-lg-5">
+        
+        <footer class="tf-footer">
+            
+            <!-- Huge Background Typography -->
+            <div class="tf-footer-bg-text">PACK</div>
+            
+            <!-- Main Content Container -->
+            <div class="tf-footer-content">
+                
+                <!-- 1. LEFT SIDE: Brand & Socials -->
+                <div class="tf-col-left">
+                    <div class="tf-brand">
+                        <h2 class="tf-logo">tray<span class="tf-color-accent">finity.</span></h2>
+                    </div>
+                    <p class="tf-tagline">Packing Freshness Beautifully.</p>
+                    <p class="tf-desc">Premium packaging trays for fresh produce, food and a sustainable future.</p>
+                    
+                    <div class="tf-social-links">
+                        <a href="#" aria-label="Facebook" class="tf-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="tf-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="tf-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" class="tf-social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2. CENTER: Navigation Columns -->
+                <div class="tf-col-center">
+                    <div class="tf-nav-group">
+                        <h4 class="tf-nav-heading">EXPLORE</h4>
+                        <ul class="tf-nav-list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Our Materials</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News & Insights</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tf-nav-group">
+                        <h4 class="tf-nav-heading">OUR PRODUCTS</h4>
+                        <ul class="tf-nav-list">
+                            <li><a href="#">Fruit Trays</a></li>
+                            <li><a href="#">Vegetable Trays</a></li>
+                            <li><a href="#">Food Trays</a></li>
+                            <li><a href="#">Custom Trays</a></li>
+                            <li><a href="#">Lidding Solutions</a></li>
+                            <li><a href="#">Bulk Orders</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tf-nav-group">
+                        <h4 class="tf-nav-heading">SUPPORT</h4>
+                        <ul class="tf-nav-list">
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Downloads</a></li>
+                            <li><a href="#">Certifications</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. RIGHT SIDE: Headline & Newsletter -->
+                <div class="tf-col-right">
+                    <h3 class="tf-hero-headline">
+                        LET'S KEEP<br>
+                        <span class="tf-color-accent">FRESHNESS</span><br>
+                        MOVING.
+                    </h3>
+                    <p class="tf-subtext">Subscribe to get <strong class="tf-color-accent">10% OFF</strong> on your first order and stay updated.</p>
+                    
+                    <form class="tf-newsletter-form" id="tfNewsletter">
+                        <input type="email" placeholder="Enter your email" class="tf-input" required>
+                        <button type="submit" class="tf-btn-submit">
+                            SUBSCRIBE <i class="far fa-paper-plane tf-icon-slide"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ORGANIC DECORATIONS & PRODUCT SHOWCASE -->
+            <div class="tf-decorations">
+                
+                <!-- Hand-drawn SVG elements -->
+                <svg class="tf-doodle tf-doodle-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,20 Q10,60 50,80 T80,30" fill="none" stroke="#ED751C" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M80,30 L65,25 M80,30 L75,45" fill="none" stroke="#ED751C" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+
+                <svg class="tf-doodle tf-doodle-leaf" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25,5 Q45,25 25,45 Q5,25 25,5 Z" fill="none" stroke="#ED751C" stroke-width="2"/>
+                </svg>
+
+                <svg class="tf-doodle tf-doodle-sparkle" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20,0 L22,18 L40,20 L22,22 L20,40 L18,22 L0,20 L18,18 Z" fill="#ED751C"/>
+                </svg>
+
+                <svg class="tf-doodle tf-doodle-smile" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,10 Q30,30 50,10" fill="none" stroke="#ED751C" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+
+                <!-- Floating Product Images -->
+                <div class="tf-product tf-product-left">
+                    <img src="assets/images/4.png" alt="Trayfinity Kraft Tray" class="tf-tray-img">
+                </div>
+                
+                <div class="tf-product tf-product-right">
+                    <img src="assets/images/2.png" alt="Trayfinity Fresh Tray" class="tf-tray-img">
+                </div>
+            </div>
+
+            <!-- BOTTOM BAR -->
+            <div class="tf-bottom-bar">
+                <div class="tf-bottom-left">
+                    <i class="fas fa-leaf tf-color-accent" style="margin-right: 8px;"></i>
+                    © 2026 Trayfinity. All rights reserved.
+                </div>
+                <div class="tf-bottom-center">
+                    <i class="fas fa-heart tf-color-accent" style="margin-right: 8px;"></i>
+                    Designed to protect what matters.
+                </div>
+                <div class="tf-bottom-right">
+                    <a href="#">Privacy Policy</a>
+                    <span class="tf-divider">|</span>
+                    <a href="#">Terms of Service</a>
+                    <span class="tf-divider">|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+
+        </footer>
 
     </section>
 
+    <script src="js/footer.js"></script>
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Custom Script -->
     <script src="js/home.js"></script>
+    <script src="js/benefits.js"></script>
 </body>
 </html>
