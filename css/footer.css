@@ -279,8 +279,8 @@
 }
 
 .tf-btn-submit {
-    background-color: var(--tf-accent-green);
-    color: var(--tf-black);
+    background-color: #ED751C;
+    color: #FFFFFF;
     border: none;
     border-radius: var(--tf-radius-element);
     padding: 16px 28px;
@@ -295,9 +295,10 @@
 }
 
 .tf-btn-submit:hover {
-    background-color: #f08b3e; /* Slightly brighter orange */
+    background-color: #d66214; /* Darker orange on hover */
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(237, 117, 28, 0.4);
+    color: #FFFFFF;
 }
 
 .tf-icon-slide {
@@ -498,7 +499,6 @@
         order: 2;
     }
     
-    /* Hide floating trays on smaller screens to prevent overlap */
     .tf-product {
         display: none;
     }
@@ -506,61 +506,103 @@
     .tf-footer {
         padding-bottom: 60px;
     }
+    .tf-footer-bg-text { font-size: 25vw; }
+}
+
+@media (max-width: 991px) {
+    .tf-col-center {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
     .tf-footer {
-        padding: 60px 40px 40px;
-        border-radius: 30px;
+        padding: 50px 20px 30px;
+        border-radius: 24px;
     }
     
     .tf-footer-content {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
     }
     
     .tf-col-center {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tf-nav-list {
+        align-items: center; /* Center the flex links */
+    }
+    
+    .tf-nav-list a:hover {
+        padding-left: 0; /* Remove hover padding shift on mobile to keep it centered */
+    }
+    .tf-nav-list a:hover::before {
+        display: none; /* Hide arrow on mobile hover to stay centered */
+    }
+    
+    .tf-social-links {
+        justify-content: center;
+        margin-top: 20px;
     }
     
     .tf-hero-headline {
-        font-size: 42px;
+        font-size: 32px;
     }
     
     .tf-bottom-bar {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+    
+    .tf-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
     
     .tf-doodle {
-        display: none; /* Reduce visual noise on mobile */
+        display: none;
     }
+    
+    .tf-footer-bg-text { font-size: 30vw; top: 15%; opacity: 0.04; }
 }
 
 @media (max-width: 480px) {
-    .tf-col-center {
-        grid-template-columns: 1fr;
-    }
-    
     .tf-hero-headline {
-        font-size: 36px;
+        font-size: 26px;
     }
+    .tf-footer-desc { font-size: 14px; }
     
     .tf-newsletter-form {
         flex-direction: column;
         background: transparent;
         border: none;
         padding: 0;
-        gap: 15px;
+        gap: 12px;
     }
     
     .tf-input {
-        background: var(--tf-white);
+        background: rgba(0,0,0,0.03);
+        border: 1px solid rgba(0,0,0,0.1);
         border-radius: var(--tf-radius-element);
-        padding: 16px 20px;
+        padding: 14px 20px;
+        text-align: center;
+        width: 100%;
     }
     
     .tf-btn-submit {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .tf-brand {
         justify-content: center;
     }
 }

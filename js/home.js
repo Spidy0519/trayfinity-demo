@@ -208,4 +208,91 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Product Page Visual Enhancements
+    const productTitles = document.querySelectorAll('.slide-title');
+    productTitles.forEach(title => {
+        // Split only if not already split
+        if (!title.querySelector('.word')) {
+            const text = title.innerHTML.trim();
+            const words = text.split(' ').map((word, index) => {
+                return `<span class="word" style="transition-delay: ${index * 60}ms">${word}</span>`;
+            }).join(' ');
+            title.innerHTML = words;
+        }
+    });
+
+    const productImages = document.querySelectorAll('.slide-image');
+    window.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.clientX) / 70;
+        const y = (window.innerHeight / 2 - e.clientY) / 70;
+        
+        productImages.forEach(img => {
+            img.style.position = 'relative';
+            img.style.left = `${x}px`;
+            img.style.top = `${y}px`;
+        });
+    }, { passive: true });
 });
+
+    // Enhanced Premium Background Injection for Text Areas
+    const textAreas = document.querySelectorAll(".product-block .text-area");
+    textAreas.forEach(area => {
+        if (area.querySelector(".premium-bg-wrapper")) return;
+
+        const bgWrapper = document.createElement("div");
+        bgWrapper.className = "premium-bg-wrapper";
+        
+        bgWrapper.innerHTML = `
+            <!-- 5-8 Oversized Organic Blobs -->
+            <div class="bg-layer layer-blob blob-1" data-speed="0.05"></div>
+            <div class="bg-layer layer-blob blob-2" data-speed="-0.03"></div>
+            <div class="bg-layer layer-blob blob-3" data-speed="0.04"></div>
+            <div class="bg-layer layer-blob blob-4" data-speed="-0.05"></div>
+            <div class="bg-layer layer-blob blob-5" data-speed="0.02"></div>
+            <div class="bg-layer layer-blob blob-6" data-speed="0.06"></div>
+            
+            <!-- 4 Soft Cloud Shapes -->
+            <div class="bg-layer layer-cloud cloud-1" data-speed="0.02"></div>
+            <div class="bg-layer layer-cloud cloud-2" data-speed="-0.01"></div>
+            <div class="bg-layer layer-cloud cloud-3" data-speed="0.03"></div>
+            <div class="bg-layer layer-cloud cloud-4" data-speed="-0.02"></div>
+
+            <!-- 3 Paper-cut layers -->
+            <div class="bg-layer layer-papercut paper-1" data-speed="0.01"></div>
+            <div class="bg-layer layer-papercut paper-2" data-speed="-0.02"></div>
+            <div class="bg-layer layer-papercut paper-3" data-speed="0.04"></div>
+
+            <!-- 3 Large faded circles -->
+            <div class="bg-layer layer-circle circle-1" data-speed="-0.03"></div>
+            <div class="bg-layer layer-circle circle-2" data-speed="0.02"></div>
+            <div class="bg-layer layer-circle circle-3" data-speed="0.05"></div>
+
+            <!-- 2 Semi-transparent arches -->
+            <div class="bg-layer layer-arch arch-1" data-speed="-0.01"></div>
+            <div class="bg-layer layer-arch arch-2" data-speed="0.02"></div>
+
+            <!-- Outlines, Grids, Lines, Particles, Leaves -->
+            <div class="bg-layer layer-outline-circle" data-speed="-0.04"></div>
+            <div class="bg-layer layer-dotted-grid" data-speed="0.01"></div>
+            <div class="bg-layer layer-packaging-lines" data-speed="0.03"></div>
+            <div class="bg-layer layer-particles" data-speed="0.06"></div>
+            <div class="bg-layer layer-leaf-1" data-speed="-0.02"></div>
+            <div class="bg-layer layer-leaf-2" data-speed="0.01"></div>
+        `;
+        
+        area.insertBefore(bgWrapper, area.firstChild);
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        const x = (window.innerWidth / 2 - e.clientX);
+        const y = (window.innerHeight / 2 - e.clientY);
+        
+        document.querySelectorAll(".premium-bg-wrapper .bg-layer").forEach(layer => {
+            const speed = parseFloat(layer.getAttribute("data-speed")) || 0;
+            if (speed !== 0) {
+                layer.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            }
+        });
+    }, { passive: true });
+

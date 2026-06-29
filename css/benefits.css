@@ -102,14 +102,16 @@
 }
 
 .tf-scatter-item {
-    position: absolute;
-    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    z-index: 5;
-}
-.tf-scatter-item:hover {
-    transform: scale(1.05) translateY(-10px) !important;
-    z-index: 20;
-}
+      position: absolute;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 5;
+      border-radius: 12px;
+  }
+  .tf-scatter-item:hover {
+      transform: scale(1.05) translateY(-10px) !important;
+      background-color: #ED751C;
+      z-index: 20;
+  }
 .tf-scatter-img {
     width: 220px;
     border-radius: 12px;
@@ -221,6 +223,8 @@
 @media (max-width: 991px) {
     .tf-benefits-section { padding: 100px 0; }
     .tf-benefits-headline { font-size: 42px; }
+    .tf-benefits-left { padding-right: 15px; text-align: center; }
+    .tf-benefits-desc { max-width: 100%; margin-left: auto; margin-right: auto; }
     .tf-benefits-right { height: 600px; margin-top: 50px; }
     .tf-scatter-img { width: 160px; }
     
@@ -240,22 +244,22 @@
 
 @media (max-width: 767px) {
     .tf-benefits-section { padding: 80px 0; }
-    .tf-benefits-headline { font-size: 36px; }
-    .tf-benefits-right { height: 500px; }
-    .tf-scatter-img { width: 120px; }
-    .tf-benefit-tag { font-size: 12px; padding: 6px 12px; }
+    .tf-benefits-headline { font-size: 32px; }
+    .tf-benefits-right { height: 400px; }
+    .tf-scatter-img { width: 100px; }
+    .tf-benefit-tag { font-size: 11px; padding: 4px 10px; }
     .tf-connector-canvas { display: none; /* Simplify on mobile */ }
     
     .tf-tray-item-1 { top: 0%; left: 5%; }
-    .tf-tray-item-2 { top: 25%; right: 5%; }
-    .tf-tray-item-3 { bottom: 5%; left: 5%; }
+    .tf-tray-item-2 { top: 20%; right: 5%; }
+    .tf-tray-item-3 { bottom: 0%; left: 5%; }
     .tf-tray-item-4 { top: 5%; left: 55%; }
-    .tf-tray-item-5 { bottom: 25%; right: 25%; }
+    .tf-tray-item-5 { bottom: 10%; right: 10%; }
     
-    .tf-tag-eco { top: 15%; left: -2%; }
-    .tf-tag-safe { top: 35%; right: -2%; }
+    .tf-tag-eco { top: 10%; left: -2%; }
+    .tf-tag-safe { top: 30%; right: -2%; }
     .tf-tag-leak { bottom: 15%; left: -2%; }
     .tf-tag-recycle { top: 10%; left: 45%; }
-    .tf-tag-light { bottom: 10%; right: -2%; }
-    .tf-tag-premium { bottom: 35%; left: 15%; }
+    .tf-tag-light { bottom: 0%; right: -2%; }
+    .tf-tag-premium { bottom: 25%; left: 15%; }
 }
