@@ -1022,8 +1022,19 @@ body.sustainability-page {
     .sus-hero-number { font-size: 60vw; }
     .sus-circle-wrapper { transform: scale(0.7); }
     .sus-commit-word { font-size: 18vw; }
+    
+    /* Gallery Mobile Fixes */
+    .sus-gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-top: 40px !important;
+    }
+    .sus-g-item {
+        padding: 25px !important;
+        border-radius: 20px !important;
+    }
 }
 @media (max-width: 575.98px) {
     .sus-circle-wrapper { transform: scale(0.45); }
-    .sus-g-item { padding: 30px; }
+    .sus-g-item { padding: 15px !important; }
 }
