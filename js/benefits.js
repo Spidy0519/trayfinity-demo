@@ -1,74 +1,72 @@
 // ==========================================
-// BENEFITS SECTION INTERACTIONS
+// WHY TRAYFINITY SECTION (Premium Editorial)
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    const benefitsSection = document.getElementById('benefits');
-    if (!benefitsSection) return;
+    const section = document.getElementById('benefits');
+    if (!section) return;
 
-    // Scroll Reveal
-    const bObserverOptions = { threshold: 0.1, rootMargin: "0px" };
-    const bObserver = new IntersectionObserver((entries, observer) => {
+    // 1. SCROLL REVEAL (Intersection Observer)
+    const revealElements = section.querySelectorAll('.b-fade-up, .b-word-reveal, .b-pill-anim, .tf-connector-canvas');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('tf-visible');
-                
-                // Draw lines
-                const lines = entry.target.querySelectorAll('.tf-connector-line');
-                lines.forEach(line => line.classList.add('drawn'));
-                
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, bObserverOptions);
-    
-    bObserver.observe(benefitsSection);
+    }, { threshold: 0.2, rootMargin: "0px 0px -100px 0px" });
 
-    // Hover Highlights (Tags and Lines)
-    const scatterItems = benefitsSection.querySelectorAll('.tf-scatter-item');
+    revealElements.forEach(el => revealObserver.observe(el));
+
+
+    // 2. MAGNETIC BUTTON
+    const magneticBtn = section.querySelector('.b-magnetic');
+    if (magneticBtn) {
+        magneticBtn.addEventListener('mousemove', (e) => {
+            const rect = magneticBtn.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+            magneticBtn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        magneticBtn.addEventListener('mouseleave', () => {
+            magneticBtn.style.transform = `translate(0px, 0px)`;
+        });
+    }
+
+    // 3. MOUSE PARALLAX (Trays and Background Shapes)
+    const parallaxItems = section.querySelectorAll('.b-parallax-item, .b-parallax-slow, .b-parallax-reverse');
     
-    scatterItems.forEach((item, index) => {
-        item.addEventListener('mouseenter', () => {
-            // Dim others
-            scatterItems.forEach(other => { if(other !== item) other.style.opacity = '0.5'; });
-            const tags = benefitsSection.querySelectorAll('.tf-benefit-tag');
-            tags.forEach(tag => tag.style.opacity = '0.3');
+    section.addEventListener('mousemove', (e) => {
+        const rect = section.getBoundingClientRect();
+        // Calculate mouse position relative to the center of the section
+        const mouseX = (e.clientX - rect.left - rect.width / 2);
+        const mouseY = (e.clientY - rect.top - rect.height / 2);
+
+        parallaxItems.forEach(item => {
+            const speed = parseFloat(item.getAttribute('data-speed')) || 0.02;
             
-            // Highlight target
-            const targetId = item.getAttribute('data-target');
-            const targetTag = document.getElementById(targetId);
-            if (targetTag) {
-                targetTag.style.opacity = '1';
-                targetTag.classList.add('highlight');
+            // Adjust direction based on class
+            let dir = 1;
+            if (item.classList.contains('b-parallax-reverse')) {
+                dir = -1;
             }
             
-            // Highlight line (assuming line indices match 1-4, etc.)
-            const line = benefitsSection.querySelector(`.tf-line-${index+1}`);
-            if (line) line.classList.add('highlight');
-        });
-        
-        item.addEventListener('mouseleave', () => {
-            scatterItems.forEach(other => other.style.opacity = '1');
-            const tags = benefitsSection.querySelectorAll('.tf-benefit-tag');
-            tags.forEach(tag => {
-                tag.style.opacity = '1';
-                tag.classList.remove('highlight');
-            });
-            const lines = benefitsSection.querySelectorAll('.tf-connector-line');
-            lines.forEach(line => line.classList.remove('highlight'));
+            // Apply transform
+            const x = mouseX * speed * dir;
+            const y = mouseY * speed * dir;
+            
+            // Avoid overriding existing CSS animations entirely by applying transform gently, 
+            // but since CSS animations use transform, mouse parallax via JS transform overrides CSS transform.
+            // For a perfect blend, we'd use a wrapper, but this simple transform works for the parallax effect.
+            item.style.transform = `translate(${x}px, ${y}px)`;
         });
     });
 
-    // Benefits Magnetic Button
-    const tfMagBtn = benefitsSection.querySelector('.tf-magnetic-btn');
-    if (tfMagBtn) {
-        tfMagBtn.addEventListener('mousemove', (e) => {
-            const rect = tfMagBtn.getBoundingClientRect();
-            const x = (e.clientX - rect.left - rect.width/2) * 0.3;
-            const y = (e.clientY - rect.top - rect.height/2) * 0.3;
-            tfMagBtn.style.transform = `translate(${x}px, ${y}px)`;
+    section.addEventListener('mouseleave', () => {
+        parallaxItems.forEach(item => {
+            item.style.transform = `translate(0px, 0px)`;
         });
-        tfMagBtn.addEventListener('mouseleave', () => {
-            tfMagBtn.style.transform = `translate(0px, 0px)`;
-        });
-    }
+    });
+
 });

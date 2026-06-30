@@ -35,7 +35,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top custom-nav" id="mainNav">
         <div class="container-fluid px-4 px-lg-5">
-            <a class="navbar-brand fw-black" href="#">Tary<span class="text-accent">FINITY</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/webe-images/Logo.webp" alt="Trayfinity Logo" style="height: 100px;">
+            </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
@@ -43,10 +45,10 @@
             
             <div class="collapse navbar-collapse" id="navContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
-                    <li class="nav-item"><a class="nav-link mx-3" href="product.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link mx-3" href="#">Sustainability</a></li>
-                    <li class="nav-item"><a class="nav-link mx-3" href="#">Technology</a></li>
-                    <li class="nav-item"><a class="nav-link mx-3" href="#">Company</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="sustainability.html">Sustainability</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="company.html">Company</a></li>
+                    <li class="nav-item"><a class="nav-link mx-3" href="contact.html">Contact Us</a></li>
                 </ul>
                 <div class="d-flex">
                     <a href="#" class="btn btn-cta btn-dark rounded-pill px-5 py-3 fw-bold">Get a Quote</a>
@@ -369,89 +371,115 @@
     </section>
 
     <!-- ==============================================
-         BENEFITS SECTION (Custom Storytelling)
+         WHY TRAYFINITY SECTION (Premium Editorial Design)
          ============================================== -->
     <section class="tf-benefits-section position-relative overflow-hidden" id="benefits">
-        <!-- Huge Background Typography -->
-        <div class="tf-benefits-bg-text">BENEFITS</div>
         
-        <!-- Subtle SVG Background Details -->
-        <div class="tf-benefits-doodles">
-            <svg class="tf-bdoodle tf-bdoodle-leaf" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                <path d="M25,5 Q45,25 25,45 Q5,25 25,5 Z" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+        <!-- Background Art -->
+        <div class="tf-benefits-bg-text">TRAYFINITY</div>
+        <div class="tf-b-bg-art">
+            <div class="tf-b-orange-shape b-parallax-slow"></div>
+            <div class="tf-b-beige-circle b-parallax-reverse"></div>
+            <div class="tf-b-outline-circle b-rotate-slow"></div>
+            <div class="tf-b-dots"></div>
+            <div class="tf-b-texture"></div>
+            <!-- Minimal leaf illustrations -->
+            <svg class="tf-b-leaf leaf-1 b-sway-slow" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25,5 Q45,25 25,45 Q5,25 25,5 Z" fill="none" stroke="#ED751C" stroke-width="1.5" opacity="0.4"/>
+                <path d="M25,5 L25,45" fill="none" stroke="#ED751C" stroke-width="1.5" opacity="0.4"/>
             </svg>
-            <svg class="tf-bdoodle tf-bdoodle-arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10,50 Q40,10 70,50 T130,50" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
-                <path d="M130,50 L110,40 M130,50 L110,60" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round"/>
+            <svg class="tf-b-leaf leaf-2 b-sway-reverse" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25,5 Q45,25 25,45 Q5,25 25,5 Z" fill="none" stroke="#ED751C" stroke-width="1.5" opacity="0.2"/>
             </svg>
-            <div class="tf-bdoodle tf-bdoodle-dots"></div>
         </div>
 
-        <div class="container-fluid px-4 px-lg-5 tf-benefits-container h-100">
+        <div class="container-fluid px-4 px-lg-5 tf-benefits-container position-relative z-3 h-100">
             <div class="row h-100 align-items-center">
-                <!-- Left Side: Typography -->
-                <div class="col-lg-5 tf-benefits-left">
-                    <div class="tf-label-small fw-bold mb-3 tf-anim-fade-up">WHY TRAYFINITY</div>
-                    <h2 class="tf-benefits-headline fw-black">
-                        Packaging That Protects<br>More Than Products.
+                <!-- Left Side: Typography & CTA -->
+                <div class="col-lg-5 tf-benefits-left pe-lg-5">
+                    <p class="tf-eyebrow b-fade-up">WHY TRAYFINITY</p>
+                    <h2 class="tf-benefits-headline fw-black mt-3 mb-4 b-word-reveal">
+                        <span>Packaging</span><br>
+                        <span>That</span> <span>Protects</span><br>
+                        <span class="text-accent tf-glow">More</span> <span class="text-accent tf-glow">Than</span> <span class="text-accent tf-glow">Products.</span>
                     </h2>
-                    <p class="tf-benefits-desc mt-4 tf-anim-fade-up">
-                        Our sustainable packaging trays are designed to deliver strength, freshness and a greener tomorrow.
+                    <p class="tf-benefits-desc b-fade-up" style="max-width: 520px; animation-delay: 0.6s;">
+                        Our sustainable food packaging combines premium protection, beautiful presentation and environmentally responsible materials.
                     </p>
-                    <a href="#" class="btn btn-benefits-cta rounded-pill px-5 py-3 fw-bold mt-5 tf-anim-fade-up d-inline-flex align-items-center gap-2 tf-magnetic-btn">
-                        Explore Solutions 
-                        <span class="tf-btn-arrow">→</span>
-                    </a>
+                    <div class="mt-5 b-fade-up" style="animation-delay: 0.8s;">
+                        <a href="#" class="btn btn-cta btn-dark rounded-pill px-5 py-3 fw-bold b-magnetic">Explore Solutions →</a>
+                    </div>
+                    
+                    <!-- Benefit Badges below CTA -->
+                    <div class="tf-badges-row mt-5 pt-3 d-flex flex-wrap gap-4 b-fade-up" style="animation-delay: 1s;">
+                        <div class="tf-small-badge d-flex align-items-center gap-2">
+                            <div class="icon-circle"><i class="fas fa-leaf text-accent"></i></div>
+                            <span class="fw-bold small text-muted">Sustainable Design</span>
+                        </div>
+                        <div class="tf-small-badge d-flex align-items-center gap-2">
+                            <div class="icon-circle"><i class="fas fa-shield-alt text-accent"></i></div>
+                            <span class="fw-bold small text-muted">Food Safe</span>
+                        </div>
+                        <div class="tf-small-badge d-flex align-items-center gap-2">
+                            <div class="icon-circle"><i class="fas fa-recycle text-accent"></i></div>
+                            <span class="fw-bold small text-muted">Fully Recyclable</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right Side: Asymmetrical Composition -->
-                <div class="col-lg-7 tf-benefits-right position-relative">
-                    
-                    <!-- SVG Canvas for Connector Lines -->
-                    <svg class="tf-connector-canvas" xmlns="http://www.w3.org/2000/svg">
-                        <path class="tf-connector-line tf-line-1" d="M80,180 Q150,140 220,180" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
-                        <path class="tf-connector-line tf-line-2" d="M380,220 Q480,280 520,180" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
-                        <path class="tf-connector-line tf-line-3" d="M150,420 C250,380 300,500 420,420" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
-                        <path class="tf-connector-line tf-line-4" d="M520,380 Q580,480 650,420" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 6"/>
-                    </svg>
+                <!-- Right Side: Hero Collage -->
+                <div class="col-lg-7 tf-benefits-right mt-5 mt-lg-0" style="height: 800px;">
+                    <div class="tf-hero-collage h-100 w-100 position-relative">
+                        
+                        <!-- SVG Canvas for Connector Lines -->
+                        <svg class="tf-connector-canvas position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
+                            <!-- Paths will be drawn by JS/CSS -->
+                            <path class="tf-connector-line draw-path" d="M 50% 50% Q 25% 25% 15% 35%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
+                            <path class="tf-connector-line draw-path" d="M 50% 50% C 60% 25% 85% 20% 80% 30%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
+                            <path class="tf-connector-line draw-path" d="M 50% 50% Q 75% 75% 70% 85%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
+                            <path class="tf-connector-line draw-path" d="M 50% 50% C 30% 70% 15% 80% 25% 90%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
+                        </svg>
 
-                    <!-- Floating Trays -->
-                    <div class="tf-scatter-item tf-tray-item-1" data-target="tag-eco">
-                        <img src="assets/images/2.png" alt="Kraft Tray" class="tf-scatter-img">
-                    </div>
-                    <div class="tf-scatter-item tf-tray-item-2" data-target="tag-safe">
-                        <img src="assets/images/4.png" alt="Food Safe Tray" class="tf-scatter-img">
-                    </div>
-                    <div class="tf-scatter-item tf-tray-item-3" data-target="tag-recycle">
-                        <img src="assets/images/5.png" alt="Recyclable Tray" class="tf-scatter-img">
-                    </div>
-                    <div class="tf-scatter-item tf-tray-item-4" data-target="tag-light">
-                        <img src="assets/images/7.png" alt="Clamshell Tray" class="tf-scatter-img">
-                    </div>
-                    <div class="tf-scatter-item tf-tray-item-5" data-target="tag-premium">
-                        <img src="assets/images/8.png" alt="Premium Tray" class="tf-scatter-img">
-                    </div>
+                        <!-- Central Tray -->
+                        <div class="tf-tray-center tf-float-slow b-parallax-item" data-speed="0.03" style="z-index: 5;">
+                            <img src="assets/images/8.png" alt="Premium Tray">
+                        </div>
 
-                    <!-- Floating Benefit Tags -->
-                    <div class="tf-benefit-tag tf-tag-eco tf-anim-slide-in" id="tag-eco">
-                        <span class="tf-check-icon">✓</span> Eco Friendly
-                    </div>
-                    <div class="tf-benefit-tag tf-tag-safe tf-anim-slide-in" id="tag-safe">
-                        <span class="tf-check-icon">✓</span> Food Safe
-                    </div>
-                    <div class="tf-benefit-tag tf-tag-leak tf-anim-slide-in" id="tag-leak">
-                        <span class="tf-check-icon">✓</span> Leak Resistant
-                    </div>
-                    <div class="tf-benefit-tag tf-tag-recycle tf-anim-slide-in" id="tag-recycle">
-                        <span class="tf-check-icon">✓</span> Recyclable
-                    </div>
-                    <div class="tf-benefit-tag tf-tag-light tf-anim-slide-in" id="tag-light">
-                        <span class="tf-check-icon">✓</span> Lightweight
-                    </div>
-                    <div class="tf-benefit-tag tf-tag-premium tf-anim-slide-in" id="tag-premium">
-                        <span class="tf-check-icon">✓</span> Premium Finish
-                    </div>
+                        <!-- 4 Smaller Trays -->
+                        <div class="tf-tray-side tray-pos-1 tf-float-reverse b-parallax-item" data-speed="0.06" style="z-index: 4;">
+                            <img src="assets/images/2.png" alt="Kraft Tray">
+                        </div>
+                        <div class="tf-tray-side tray-pos-2 tf-float-slow b-parallax-item" data-speed="-0.04" style="animation-delay: 1s; z-index: 4;">
+                            <img src="assets/images/4.png" alt="Food Safe Tray">
+                        </div>
+                        <div class="tf-tray-side tray-pos-3 tf-float-reverse b-parallax-item" data-speed="0.05" style="animation-delay: 2s; z-index: 4;">
+                            <img src="assets/images/5.png" alt="Recyclable Tray">
+                        </div>
+                        <div class="tf-tray-side tray-pos-4 tf-float-slow b-parallax-item" data-speed="-0.07" style="animation-delay: 3s; z-index: 4;">
+                            <img src="assets/images/7.png" alt="Clamshell Tray">
+                        </div>
 
+                        <!-- Benefit Labels (Pills) -->
+                        <div class="tf-pill pill-pos-1 b-pill-anim" style="z-index: 6;">
+                            <span class="pill-icon text-accent"><i class="fas fa-leaf"></i></span> Eco Friendly
+                        </div>
+                        <div class="tf-pill pill-pos-2 b-pill-anim" style="animation-delay: 0.2s; z-index: 6;">
+                            <span class="pill-icon text-accent"><i class="fas fa-shield-alt"></i></span> Food Safe
+                        </div>
+                        <div class="tf-pill pill-pos-3 b-pill-anim" style="animation-delay: 0.4s; z-index: 6;">
+                            <span class="pill-icon text-accent"><i class="fas fa-star"></i></span> Premium Finish
+                        </div>
+                        <div class="tf-pill pill-pos-4 b-pill-anim" style="animation-delay: 0.6s; z-index: 6;">
+                            <span class="pill-icon text-accent"><i class="fas fa-tint-slash"></i></span> Leak Resistant
+                        </div>
+                        <div class="tf-pill pill-pos-5 b-pill-anim" style="animation-delay: 0.8s; z-index: 6;">
+                            <span class="pill-icon text-accent"><i class="fas fa-feather"></i></span> Lightweight
+                        </div>
+                        <div class="tf-pill pill-pos-6 b-pill-anim" style="animation-delay: 1s; z-index: 6;">
+                            <span class="pill-icon text-accent"><i class="fas fa-recycle"></i></span> Recyclable
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -473,7 +501,7 @@
                 <!-- 1. LEFT SIDE: Brand & Socials -->
                 <div class="tf-col-left">
                     <div class="tf-brand">
-                        <h2 class="tf-logo">tray<span class="tf-color-accent">finity.</span></h2>
+                        <img src="assets/webe-images/Logo.webp" alt="Trayfinity Logo" style="height: 150px;">
                     </div>
                     <p class="tf-tagline">Packing Freshness Beautifully.</p>
                     <p class="tf-desc">Premium packaging trays for fresh produce, food and a sustainable future.</p>
