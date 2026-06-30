@@ -648,7 +648,6 @@ body.sustainability-page {
     100% { transform: translateY(15px) scale(1.05); }
 }
 @keyframes rotateSlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-@keyframes rotateSlowReverse { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
 @keyframes driftSlow { 0% { transform: translate(0, 0); } 100% { transform: translate(5%, 10%); } }
 
 .float-ind-1 { animation: floatInd1 8s ease-in-out infinite alternate; }
@@ -848,20 +847,7 @@ body.sustainability-page {
     width: 60%; height: 60%;
     border: 2px dashed var(--sus-primary);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.sus-circle-center-img {
-    width: 88%;
-    height: 88%;
-    object-fit: cover;
-    border-radius: 50%;
-    pointer-events: none;
-    display: block;
-    flex-shrink: 0;
+    animation: rotateSlow 40s linear infinite;
 }
 
 .sus-circle-node {
