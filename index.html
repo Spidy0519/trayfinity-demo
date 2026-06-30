@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trayfinity | Smart Packaging</title>
+    <link rel="shortcut icon" href="assets/webe-images/Logo.webp" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +67,7 @@
                 <div class="auto-scroll-wrapper mx-auto overflow-hidden position-relative w-100 h-100">
                     <div class="photo-slideshow h-100 w-100 position-relative">
                         <!-- User will add pack photos here -->
-                        <img src="assets/webe-images/scroll.webp" class="slide-photo active" alt="Pack">
+                        <img src="assets/webe-images/10.webp" class="slide-photo " alt="Pack">
                         <img src="assets/webe-images/scroll1.webp" class="slide-photo" alt="Pack">
                         <img src="assets/webe-images/scroll2.webp" class="slide-photo" alt="Pack">
                         <img src="assets/webe-images/scroll3.webp" class="slide-photo" alt="Pack">
@@ -125,7 +126,7 @@
                 <div class="auto-scroll-wrapper overflow-hidden position-relative" style="width: 80%; height: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 30;">
                     <div class="photo-slideshow h-100 w-100 position-relative">
                         <!-- User will add pack photos here -->
-                        <img src="assets/webe-images/scroll.webp" class="slide-photo active" alt="Pack">
+                        <img src="assets/webe-images/10.webp" class="slide-photo active" alt="Pack">
                         <img src="assets/webe-images/scroll1.webp" class="slide-photo" alt="Pack">
                         <img src="assets/webe-images/scroll2.webp" class="slide-photo" alt="Pack">
                         <img src="assets/webe-images/scroll3.webp" class="slide-photo" alt="Pack">
@@ -422,64 +423,88 @@
                         </div>
                         <div class="tf-small-badge d-flex align-items-center gap-2">
                             <div class="icon-circle"><i class="fas fa-recycle text-accent"></i></div>
-                            <span class="fw-bold small text-muted">Fully Recyclable</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Side: Hero Collage -->
-                <div class="col-lg-7 tf-benefits-right mt-5 mt-lg-0" style="height: 800px;">
+                <div class="col-lg-7 tf-benefits-right mt-5 mt-lg-0 position-relative" style="height: 800px;">
                     <div class="tf-hero-collage h-100 w-100 position-relative">
                         
-                        <!-- SVG Canvas for Connector Lines -->
-                        <svg class="tf-connector-canvas position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;">
-                            <!-- Paths will be drawn by JS/CSS -->
-                            <path class="tf-connector-line draw-path" d="M 50% 50% Q 25% 25% 15% 35%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
-                            <path class="tf-connector-line draw-path" d="M 50% 50% C 60% 25% 85% 20% 80% 30%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
-                            <path class="tf-connector-line draw-path" d="M 50% 50% Q 75% 75% 70% 85%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
-                            <path class="tf-connector-line draw-path" d="M 50% 50% C 30% 70% 15% 80% 25% 90%" fill="none" stroke="#ED751C" stroke-width="1.5" stroke-dasharray="4 6"/>
-                        </svg>
-
-                        <!-- Central Tray -->
-                        <div class="tf-tray-center tf-float-slow b-parallax-item" data-speed="0.03" style="z-index: 5;">
-                            <img src="assets/images/8.png" alt="Premium Tray">
+                        <!-- 1. Top Center: Eco Friendly -->
+                        <div class="tf-tray-item t-pos-1 tf-float-slow b-parallax-item" data-speed="0.04">
+                            <svg class="connector-svg" style="top: 20%; left: -40%; width: 120px; height: 80px;">
+                                <path class="connector-line draw-path" d="M 0 40 Q 60 60 120 20"/>
+                                <circle class="connector-dot" cx="120" cy="20" r="4"/>
+                            </svg>
+                            <div class="tf-pill b-pill-anim" style="top: 5%; left: -60%; animation-delay: 0.1s;">
+                                <span class="pill-icon text-accent"><i class="fas fa-leaf"></i></span> Eco Friendly
+                            </div>
+                            <img src="assets/webe-images/scroll.webp" alt="Kraft Tray">
                         </div>
 
-                        <!-- 4 Smaller Trays -->
-                        <div class="tf-tray-side tray-pos-1 tf-float-reverse b-parallax-item" data-speed="0.06" style="z-index: 4;">
-                            <img src="assets/images/2.png" alt="Kraft Tray">
-                        </div>
-                        <div class="tf-tray-side tray-pos-2 tf-float-slow b-parallax-item" data-speed="-0.04" style="animation-delay: 1s; z-index: 4;">
-                            <img src="assets/images/4.png" alt="Food Safe Tray">
-                        </div>
-                        <div class="tf-tray-side tray-pos-3 tf-float-reverse b-parallax-item" data-speed="0.05" style="animation-delay: 2s; z-index: 4;">
-                            <img src="assets/images/5.png" alt="Recyclable Tray">
-                        </div>
-                        <div class="tf-tray-side tray-pos-4 tf-float-slow b-parallax-item" data-speed="-0.07" style="animation-delay: 3s; z-index: 4;">
-                            <img src="assets/images/7.png" alt="Clamshell Tray">
+                        <!-- 2. Top Right: Recyclable -->
+                        <div class="tf-tray-item t-pos-2 tf-float-reverse b-parallax-item" data-speed="0.06">
+                            <svg class="connector-svg" style="top: -10%; right: 20%; width: 80px; height: 80px;">
+                                <path class="connector-line draw-path" d="M 80 0 Q 40 20 0 60"/>
+                                <circle class="connector-dot" cx="0" cy="60" r="4"/>
+                            </svg>
+                            <div class="tf-pill b-pill-anim" style="top: -30%; right: -10%; animation-delay: 0.3s;">
+                                <span class="pill-icon text-accent"><i class="fas fa-recycle"></i></span> Recyclable
+                            </div>
+                            <img src="assets/webe-images/scroll1.webp" alt="Divided Tray">
                         </div>
 
-                        <!-- Benefit Labels (Pills) -->
-                        <div class="tf-pill pill-pos-1 b-pill-anim" style="z-index: 6;">
-                            <span class="pill-icon text-accent"><i class="fas fa-leaf"></i></span> Eco Friendly
-                        </div>
-                        <div class="tf-pill pill-pos-2 b-pill-anim" style="animation-delay: 0.2s; z-index: 6;">
-                            <span class="pill-icon text-accent"><i class="fas fa-shield-alt"></i></span> Food Safe
-                        </div>
-                        <div class="tf-pill pill-pos-3 b-pill-anim" style="animation-delay: 0.4s; z-index: 6;">
-                            <span class="pill-icon text-accent"><i class="fas fa-star"></i></span> Premium Finish
-                        </div>
-                        <div class="tf-pill pill-pos-4 b-pill-anim" style="animation-delay: 0.6s; z-index: 6;">
-                            <span class="pill-icon text-accent"><i class="fas fa-tint-slash"></i></span> Leak Resistant
-                        </div>
-                        <div class="tf-pill pill-pos-5 b-pill-anim" style="animation-delay: 0.8s; z-index: 6;">
-                            <span class="pill-icon text-accent"><i class="fas fa-feather"></i></span> Lightweight
-                        </div>
-                        <div class="tf-pill pill-pos-6 b-pill-anim" style="animation-delay: 1s; z-index: 6;">
-                            <span class="pill-icon text-accent"><i class="fas fa-recycle"></i></span> Recyclable
+                        <!-- 3. Middle Left: Food Safe -->
+                        <div class="tf-tray-item t-pos-3 tf-float-slow b-parallax-item" data-speed="-0.03">
+                            <svg class="connector-svg" style="top: 40%; left: -50%; width: 130px; height: 40px;">
+                                <path class="connector-line draw-path" d="M 0 20 L 130 20"/>
+                                <circle class="connector-dot" cx="130" cy="20" r="4"/>
+                            </svg>
+                            <div class="tf-pill b-pill-anim" style="top: 40%; left: -75%; animation-delay: 0.5s;">
+                                <span class="pill-icon text-accent"><i class="fas fa-shield-alt"></i></span> Food Safe
+                            </div>
+                            <img src="assets/webe-images/scroll2.webp" alt="Square Tray">
                         </div>
 
+                        <!-- 4. Middle Right: Premium Finish -->
+                        <div class="tf-tray-item t-pos-4 tf-float-reverse b-parallax-item" data-speed="-0.05">
+                            <svg class="connector-svg" style="top: 30%; right: -40%; width: 120px; height: 60px;">
+                                <path class="connector-line draw-path" d="M 120 30 L 0 50"/>
+                                <circle class="connector-dot" cx="0" cy="50" r="4"/>
+                            </svg>
+                            <div class="tf-pill b-pill-anim" style="top: 25%; right: -60%; animation-delay: 0.2s;">
+                                <span class="pill-icon text-accent"><i class="fas fa-star"></i></span> Premium Finish
+                            </div>
+                            <img src="assets/webe-images/scroll3.webp" alt="Premium Tray">
+                        </div>
+
+                        <!-- 5. Bottom Left: Leak Resistant -->
+                        <div class="tf-tray-item t-pos-5 tf-float-slow b-parallax-item" data-speed="0.05">
+                            <svg class="connector-svg" style="bottom: 0%; left: -50%; top: auto; width: 130px; height: 80px;">
+                                <path class="connector-line draw-path" d="M 0 80 Q 65 50 130 20"/>
+                                <circle class="connector-dot" cx="130" cy="20" r="4"/>
+                            </svg>
+                            <div class="tf-pill b-pill-anim" style="bottom: -15%; left: -70%; animation-delay: 0.6s;">
+                                <span class="pill-icon text-accent"><i class="fas fa-tint-slash"></i></span> Leak Resistant
+                            </div>
+                            <img src="assets/webe-images/scroll4.webp" alt="Deep Tray">
+                        </div>
+
+                        <!-- 6. Bottom Right: Lightweight -->
+                        <div class="tf-tray-item t-pos-6 tf-float-reverse b-parallax-item" data-speed="0.04">
+                            <svg class="connector-svg" style="bottom: 20%; right: -30%; top: auto; width: 90px; height: 60px;">
+                                <path class="connector-line draw-path" d="M 90 30 Q 45 40 0 10"/>
+                                <circle class="connector-dot" cx="0" cy="10" r="4"/>
+                            </svg>
+                            <div class="tf-pill b-pill-anim" style="bottom: 10%; right: -50%; animation-delay: 0.4s;">
+                                <span class="pill-icon text-accent"><i class="fas fa-feather"></i></span> Lightweight
+                            </div>
+                            <img src="assets/webe-images/scroll5.webp" alt="Small Tray">
+                        </div>
+                        
                     </div>
+                </div>
                 </div>
             </div>
         </div>

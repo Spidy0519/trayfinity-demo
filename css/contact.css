@@ -25,26 +25,26 @@ body.contact-page {
 }
 
 .c-hero-title {
-    font-size: 90px;
+    font-size: clamp(40px, 7vw, 90px);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -3px;
 }
 
 .c-section-title {
-    font-size: 64px;
+    font-size: clamp(36px, 5vw, 64px);
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -2px;
 }
 
 .c-sub-title {
-    font-size: 28px;
+    font-size: clamp(24px, 3vw, 28px);
     font-weight: 800;
 }
 
 .c-desc {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     line-height: 1.6;
     color: #444;
 }
@@ -343,13 +343,17 @@ body.contact-page {
 
 
 /* --- RESPONSIVE --- */
-@media (max-width: 992px) {
-    .c-hero-title { font-size: 60px; }
-    .c-section-title { font-size: 48px; }
-    .c-final-title { font-size: 48px; }
+@media (max-width: 991.98px) {
+    .c-hero-section { padding: 150px 0 80px; }
     .c-hero-right { height: 400px; margin-top: 50px; }
+    .c-hero-tray { width: 150%; }
     .c-form-box { padding: 40px; }
     .c-why-col { padding: 20px; }
+    .c-final-box { padding: 60px 30px; }
+}
+@media (max-width: 575.98px) {
+    .c-form-box { padding: 30px 20px; }
+    .c-hero-tray { width: 180%; }
 }
 
 /* --- ENHANCED BACKGROUND SYSTEM --- */

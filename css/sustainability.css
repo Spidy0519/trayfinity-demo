@@ -33,17 +33,11 @@ body.sustainability-page {
 }
 
 .sustainability-page p {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 24px);
     line-height: 1.6;
     max-width: 620px;
     font-weight: 400;
     color: #444;
-}
-
-@media (min-width: 992px) {
-    .sustainability-page p {
-        font-size: 24px;
-    }
 }
 
 /* --- UTILITIES --- */
@@ -237,15 +231,12 @@ body.sustainability-page {
     margin-bottom: 20px;
 }
 .sus-hero-heading {
-    font-size: 50px;
+    font-size: clamp(40px, 6vw, 90px);
     font-family: var(--sus-font-heading);
     font-weight: 900;
     line-height: 1.05;
     color: #111111;
     margin-bottom: 30px;
-}
-@media (min-width: 992px) {
-    .sus-hero-heading { font-size: 90px; }
 }
 .hero-orange-word {
     color: #ED751C !important;
@@ -964,7 +955,7 @@ body.sustainability-page {
 }
 
 .sus-stat-number {
-    font-size: 100px;
+    font-size: clamp(60px, 10vw, 150px);
     font-weight: 900;
     color: var(--sus-primary);
     line-height: 1;
@@ -979,10 +970,6 @@ body.sustainability-page {
     font-weight: 700;
 }
 
-@media (min-width: 992px) {
-    .sus-stat-number { font-size: 150px; }
-}
-
 /* --- 9. FINAL CTA --- */
 .sus-cta {
     background-color: var(--sus-primary);
@@ -993,12 +980,9 @@ body.sustainability-page {
 }
 
 .sus-cta h2 {
-    font-size: 60px;
+    font-size: clamp(40px, 7vw, 100px);
     margin-bottom: 50px;
     color: #FFF;
-}
-@media (min-width: 992px) {
-    .sus-cta h2 { font-size: 100px; }
 }
 
 .sus-cta .sus-btn {
@@ -1029,4 +1013,17 @@ body.sustainability-page {
 @keyframes rotateSlow {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media (max-width: 991.98px) {
+    .sus-hero-new { padding-top: 150px; }
+    .sus-section { padding: 80px 0; }
+    .sus-hero-orange-semi { width: 100vw; height: 100vw; }
+    .sus-hero-number { font-size: 60vw; }
+    .sus-circle-wrapper { transform: scale(0.7); }
+    .sus-commit-word { font-size: 18vw; }
+}
+@media (max-width: 575.98px) {
+    .sus-circle-wrapper { transform: scale(0.45); }
+    .sus-g-item { padding: 30px; }
 }

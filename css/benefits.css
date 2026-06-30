@@ -89,7 +89,7 @@
 }
 
 .tf-benefits-headline {
-    font-size: 90px;
+    font-size: clamp(40px, 6vw, 90px);
     line-height: 1;
     letter-spacing: -3px;
 }
@@ -99,7 +99,7 @@
 }
 
 .tf-benefits-desc {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     line-height: 1.6;
     color: #444;
 }
@@ -129,53 +129,58 @@
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.tf-tray-center {
+.tf-tray-item {
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    z-index: 5;
     cursor: pointer;
+    z-index: 5;
 }
-.tf-tray-center:hover img, .tf-tray-side:hover img {
+.tf-tray-item:hover img {
     transform: scale(1.05) translateY(-10px);
 }
 
-.tf-tray-side {
-    position: absolute;
-    cursor: pointer;
-}
-.tray-pos-1 { width: 250px; top: 10%; left: 15%; transform: rotate(-15deg); }
-.tray-pos-2 { width: 300px; top: 5%; right: 5%; transform: rotate(10deg); }
-.tray-pos-3 { width: 280px; bottom: 10%; right: 10%; transform: rotate(-5deg); }
-.tray-pos-4 { width: 220px; bottom: 15%; left: 20%; transform: rotate(15deg); }
-
+/* 6 Tray Orbital Positions */
+.t-pos-1 { width: 280px; top: 10%; left: 50%; transform: translateX(-50%) rotate(5deg); }
+.t-pos-2 { width: 320px; top: 25%; right: 5%; transform: rotate(-5deg); }
+.t-pos-3 { width: 260px; top: 55%; left: 5%; transform: rotate(-8deg); }
+.t-pos-4 { width: 340px; top: 45%; right: 10%; transform: rotate(5deg); }
+.t-pos-5 { width: 260px; bottom: 15%; left: 15%; transform: rotate(10deg); }
+.t-pos-6 { width: 220px; bottom: 5%; right: 25%; transform: rotate(-5deg); }
 
 /* --- BENEFIT PILLS --- */
 .tf-pill {
     position: absolute;
     background: #FFF;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-    display: flex; align-items: center; gap: 10px;
+    display: flex; align-items: center; gap: 8px;
     cursor: default;
+    white-space: nowrap;
     transition: transform 0.4s ease;
+    z-index: 10;
 }
 .tf-pill:hover { transform: translateY(-5px) scale(1.05); }
 
-.pill-pos-1 { top: 20%; left: 5%; }
-.pill-pos-2 { top: 35%; right: -5%; }
-.pill-pos-3 { top: 50%; left: 0%; }
-.pill-pos-4 { bottom: 35%; right: 0%; }
-.pill-pos-5 { bottom: 20%; left: 10%; }
-.pill-pos-6 { bottom: 5%; right: 25%; }
+/* SVG Connectors */
+.connector-svg {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 200px; height: 100px;
+    pointer-events: none;
+    z-index: 0;
+}
+.connector-line {
+    fill: none; stroke: #ED751C; stroke-width: 1.5; stroke-dasharray: 4 6;
+}
+.connector-dot {
+    fill: #ED751C;
+}
 
 .pill-icon {
     display: flex; justify-content: center; align-items: center;
-    width: 24px; height: 24px;
+    width: 22px; height: 22px;
     background: #F8F4EF;
     border-radius: 50%;
     font-size: 12px;
@@ -225,9 +230,43 @@
 }
 
 /* RESPONSIVE Adjustments */
-@media (max-width: 992px) {
-    .tf-benefits-headline { font-size: 60px; }
-    .tf-tray-center { width: 300px; }
-    .tray-pos-1, .tray-pos-2, .tray-pos-3, .tray-pos-4 { width: 150px; }
-    .tf-hero-collage { height: 600px; }
+@media (max-width: 991.98px) {
+    .tf-benefits-section {
+        padding: 80px 0;
+    }
+    .tf-benefits-left {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .tf-benefits-desc {
+        margin: 0 auto;
+    }
+    .tf-badges-row {
+        justify-content: center;
+    }
+    
+    /* Scale the complex orbital collage down proportionally for tablet/mobile */
+    .tf-benefits-right {
+        height: 600px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .tf-hero-collage {
+        transform: scale(0.65);
+        transform-origin: center center;
+        width: 100vw;
+    }
+}
+@media (max-width: 575.98px) {
+    .tf-hero-collage {
+        transform: scale(0.45);
+    }
+    .tf-benefits-right {
+        height: 450px !important;
+    }
+    .tf-b-orange-shape, .tf-b-beige-circle {
+        transform: scale(0.6);
+    }
 }

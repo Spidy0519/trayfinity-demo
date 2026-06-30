@@ -21,17 +21,14 @@ body.company-page {
 
 /* --- TYPOGRAPHY --- */
 .c-heading {
-    font-size: 50px;
+    font-size: clamp(40px, 6vw, 80px);
     font-family: var(--c-font-heading);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -1px;
 }
-@media (min-width: 992px) {
-    .c-heading { font-size: 80px; }
-}
 .c-desc {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     line-height: 1.8;
     color: #444;
     max-width: 650px;
@@ -147,13 +144,10 @@ body.company-page {
     letter-spacing: 3px;
 }
 .c-hero-heading {
-    font-size: 60px;
+    font-size: clamp(48px, 7vw, 96px);
     font-family: var(--c-font-heading);
     font-weight: 900;
     line-height: 1.05;
-}
-@media (min-width: 992px) {
-    .c-hero-heading { font-size: 96px; }
 }
 .c-blur-word {
     display: inline-block;
@@ -319,7 +313,7 @@ body.company-page {
     background: rgba(237, 117, 28, 0.02);
 }
 .c-value-title {
-    font-size: 80px;
+    font-size: clamp(36px, 6vw, 80px);
     font-weight: 900;
     letter-spacing: -2px;
     color: var(--c-black);
@@ -544,7 +538,7 @@ body.company-page {
     padding: 200px 0;
 }
 .c-vision-text {
-    font-size: 70px;
+    font-size: clamp(40px, 5vw, 70px);
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -2px;
@@ -598,4 +592,32 @@ body.company-page {
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
     animation: drawHeroLine 4s ease-out forwards;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 991.98px) {
+    .c-hero { padding-top: 150px; }
+    .c-hero-img { width: 100%; margin-top: 40px; }
+    .c-story, .c-different, .c-facility, .c-choose, .c-people, .c-vision { padding: 80px 0; }
+    .c-story-img { height: 400px; margin-bottom: 40px; }
+    .c-collage-large, .c-collage-medium, .c-collage-small { position: static; width: 100%; height: 300px; margin-bottom: 20px; }
+    .c-people-collage { height: auto; display: flex; flex-direction: column; }
+    .c-cta-box { padding: 60px 20px; text-align: center; }
+    .c-stat span { font-size: 50px; }
+    
+    /* VALUES SECTION FIX */
+    .c-value-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 40px 10px;
+    }
+    .c-value-row:hover {
+        padding: 40px 10px;
+    }
+    .c-value-icon {
+        opacity: 1;
+        transform: translateX(0);
+        margin-top: 15px;
+    }
 }

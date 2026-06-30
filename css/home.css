@@ -1044,17 +1044,17 @@ body, html {
     color: #B85C00;
 }
 .product-block .text-area .prod-title {
-    font-size: 64px !important;
+    font-size: clamp(32px, 5vw, 64px) !important;
     font-weight: 800 !important;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
 }
 .product-block .text-area .prod-desc {
-    font-size: 24px !important;
+    font-size: clamp(16px, 2vw, 24px) !important;
     line-height: 1.8 !important;
 }
 .product-block .text-area .feature-list li {
-    font-size: 22px !important;
+    font-size: clamp(16px, 1.8vw, 22px) !important;
     margin-bottom: 18px !important;
 }
 

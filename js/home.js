@@ -15,15 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Hero Photo Slideshow
-    const slides = document.querySelectorAll('.slide-photo');
-    if (slides.length > 0) {
-        let currentSlide = 0;
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 3000); // Change photo every 3 seconds
-    }
+    const slideshows = document.querySelectorAll('.photo-slideshow');
+    slideshows.forEach(slideshow => {
+        const slides = slideshow.querySelectorAll('.slide-photo');
+        if (slides.length > 0) {
+            let currentSlide = 0;
+            // Ensure only the first slide is active initially
+            slides.forEach((s, idx) => {
+                if(idx === 0) s.classList.add('active');
+                else s.classList.remove('active');
+            });
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 1500); // Change photo every 1.5 seconds
+        }
+    });
 
     // 3. Entrance Animation for Headline
     const textLines = document.querySelectorAll('.line-inner');
